@@ -5,6 +5,6 @@ flex shortcuts.l
 gcc lex.yy.c -o shortcuts -lfl
 ./shortcuts input.c program.c
 
-//COmpilar y ejecutar el programa c
+//Compilar y ejecutar el programa c
 gcc program.c -o program
 ./program

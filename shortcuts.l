@@ -4,6 +4,9 @@
 
 %%
 " in "              { fprintf(yyout, " int "); }
+" s "               { fprintf(yyout, " switch "); }
+" c "               { fprintf(yyout, " case "); }
+" b "               { fprintf(yyout, " break "); }
 " fl "              { fprintf(yyout, " float "); }
 " ch "              { fprintf(yyout, " char "); }
 " ch* "              { fprintf(yyout, " char* "); }
@@ -13,9 +16,6 @@
 " w "               { fprintf(yyout, " while "); }
 " f "               { fprintf(yyout, " for "); }
 " d "               { fprintf(yyout, " do "); }
-" s "               { fprintf(yyout, " switch "); }
-" c "               { fprintf(yyout, " case "); }
-" b "               { fprintf(yyout, " break "); }
 " r "               { fprintf(yyout, " return "); }
 " v "               { fprintf(yyout, " void "); }
 " cn "              { fprintf(yyout, " const "); }
@@ -26,11 +26,9 @@
 " scpy"            { fprintf(yyout, " strcpy ");  }
 " scat"            { fprintf(yyout, " strcat ");  }
 " slen"            { fprintf(yyout, " strlen ");  }
-
 .                   { fprintf(yyout, "%c", yytext[0]); }
 
 %%
-
 int main(int argc, char **argv) {
     if (argc != 3) {
         printf("Uso: %s archivo_entrada archivo_salida\n", argv[0]);

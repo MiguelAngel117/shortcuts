@@ -8,7 +8,7 @@
 
  ch* getUserName() {
     ch* name;
-    name = (char*) mll (50);
+    name = (char*) mll (100);
     i (!name) {
         pf("Error al asignar memoria.\n");
         exit(1);
