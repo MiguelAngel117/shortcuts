@@ -1,0 +1,10 @@
+//Generar analizador lexico 
+flex shortcuts.l
+
+//iniciar el progrma en c con las abreviaciones
+gcc lex.yy.c -o shortcuts -lfl
+./shortcuts input.c program.c
+
+//COmpilar y ejecutar el programa c
+gcc program.c -o program
+./program
